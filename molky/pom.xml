@@ -9,7 +9,7 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>fooBarQix</artifactId>
+  <artifactId>molky</artifactId>
 
   <build>
     <sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
@@ -40,5 +40,4 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
 </project>
