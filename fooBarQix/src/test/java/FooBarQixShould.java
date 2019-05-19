@@ -1,7 +1,6 @@
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -23,9 +22,10 @@ public class FooBarQixShould {
     assertThat(result).isEqualTo(value);
   }
 
-  @DisplayName("FooBarQix")
+  @DisplayName("for specific values that display either Foo, Bar or Qix")
   @ParameterizedTest(name = "return {0} when compute with {1}")
-  @CsvSource({"3, FooFoo", "5, BarBar", "7, QixQix", "9, Foo"})
+  @CsvSource({"3, FooFoo", "5, BarBar", "7, QixQix", "9, Foo", "10, Bar", "13, Foo",
+      "15, FooBarBar", "21, FooQix", "33, FooFooFoo"})
   public void test_with_other_value(String value, String expectedResult) {
     // given
     var fooBarQix = new FooBarQix();
